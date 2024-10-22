@@ -13,6 +13,11 @@ agregamos la propiedad: valor;
     max-width: 1920px;
 }
 
+#body{
+    position: relative;
+    min-height: 100vh;
+}
+
 
 /*ESTILOS Header*/
 #header #navBar ul li a {
@@ -29,7 +34,6 @@ agregamos la propiedad: valor;
     background-color: orange;
     height: 70px;
     width: 100%;
-
 }
 
 #navBar{
@@ -233,6 +237,28 @@ li{
 
 .button__productos a:hover{
     background-color:rgb(183, 119, 0);
+}
+
+/*PAGINA SOBRE NOSOTROS*/
+
+.presentación{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
+    grid-template-areas: 
+    "imagen  imagen"
+    "texto   texto ";
+    gap: 20px; /* Espacio entre las columnas */
+    justify-items: center; /* Centrar contenido en cada celda */
+    align-items: center;
+    width: 90%; /* Para que no ocupe toda la pantalla, puedes ajustar */
+    margin: 0 30px; /* Centrar el contenedor dentro de la página */
+    margin-bottom: 100px;
+    padding-top: 150px;
+}
+
+.presentación h2, .presentación p {
+    height:max-content;
+    width: 100%;
 }
 
 
