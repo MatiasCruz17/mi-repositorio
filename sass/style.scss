@@ -19,48 +19,11 @@ agregamos la propiedad: valor;
 }
 
 /*HEADER BOOTSRAP*/
-/*.navbar-brand img{
-    width: 100px;
-    padding: left 50px; ;
-}
 
 .h3{
     font-size: 20px;
-}*/
-
-/*ESTILOS Header*/
-/*#header #navBar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
-    font-family:Arial, Helvetica, sans-serif;
 }
 
-#header {
-    position: fixed;
-    z-index: 1;
-    align-items: flex-start;
-    background-color: orange;
-    height: 70px;
-    width: 100%;
-}
-
-#navBar{
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.navBar-ul{
-    text-align: center;
-}
-
-li{
-    display: inline-block;
-    margin-left: 25px;
-}*/
 
 /*ESTILOS Inicio*/
 
@@ -125,6 +88,10 @@ li{
     background-color:rgb(183, 119, 0);
 }
 
+.a{
+    text-decoration: none;
+}
+
 
 /*ESTILOS FOOTER*/
 
@@ -134,6 +101,8 @@ li{
     width: 100%;
     height: auto;
     display: flex;
+    min-height: 10dvh;
+    grid-template-rows: auto 1fr auto;
     align-items: center;
     justify-content: space-around;
 }
@@ -272,33 +241,134 @@ li{
 
 /*PAGINA CONTACTO*/
 
-.form{
-    display: flex;
-    justify-content:center;
-    justify-items: center;
+.h2-contacto{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orange;
+    margin-bottom: 20px; /* Añade espacio entre el h2 y los productos */
+    margin-top: 100px;
+    z-index: 10px;
 }
+
+/* Estilos generales del formulario */
+.form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto; /* Centra el formulario */
+    margin-bottom: 10%;
+    padding: 20px;
+    background-color: orange;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.form h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+  /* Estilos para los labels */
+.form label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    font-family: 'Arial', sans-serif;
+}
+
+  /* Estilos para los inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="radio"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+  /* Radio buttons con etiquetas a la izquierda */
+form input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+form label[for="radio"] {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+  /* Estilo del textarea */
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+  /* Botones */
+form input[type="submit"],
+form input[type="reset"] {
+    width: calc(50% - 10px);
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: rgb(155, 16, 16);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: rgb(228, 15, 15);
+}
+
+  /* Botones alineados */
+form input[type="reset"] {
+    margin-left: 0px;
+    margin-top: 20px;
+    background-color: rgb(16, 11, 11);
+}
+
+form input[type="reset"]:hover {
+    background-color: rgb(58, 58, 58);
+}
+
+  /* Estilos para móviles */
+@media only screen and (max-width: 600px) {
+    form {
+    width: 95%;
+    }
+    
+    form input[type="submit"],
+    form input[type="reset"] {
+    width: 100%;
+    margin: 10px 0;
+    }
+}
+
 
 /*PAGINA PREGUNTAS FRECUENTES*/
-#faq {
-    padding: 1em;
-    background-color:orange;
-    display: block;
+#faq{
     justify-content: center;
-}
-#faq h2 {
-    color: #333;
-}
-.pregunta {
-    margin-bottom: 1em;
-}
-
-.pregunta h3 {
-    margin: 0;
-    color: #555;
-}
-
-.pregunta p {
-    margin: 0.5em 0 0;
+    text-align: center;
 }
 
 /*Media Queries*/
@@ -385,7 +455,6 @@ li{
         padding: 10px 18px;
     }
 }
-
 
 
 /*BREAKPOINTS
