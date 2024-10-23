@@ -195,7 +195,7 @@ li{
 }
 
 .descrpción{
-    grid-column: 1 / -1;  /*Hace que el h2 ocupe toda la fila (ambas columnas) */
+    grid-column: 1 / -1;  /*Hace que la descripción ocupe toda la fila (ambas columnas) */
     text-align: center; /* Centrar el texto debajo de cada imagen */
     font-size: 15px;
     font-weight: 600;
@@ -273,9 +273,33 @@ li{
 /*PAGINA CONTACTO*/
 
 .form{
+    display: flex;
     justify-content:center;
+    justify-items: center;
 }
 
+/*PAGINA PREGUNTAS FRECUENTES*/
+#faq {
+    padding: 1em;
+    background-color:orange;
+    display: block;
+    justify-content: center;
+}
+#faq h2 {
+    color: #333;
+}
+.pregunta {
+    margin-bottom: 1em;
+}
+
+.pregunta h3 {
+    margin: 0;
+    color: #555;
+}
+
+.pregunta p {
+    margin: 0.5em 0 0;
+}
 
 /*Media Queries*/
 /* Dispositivos móviles (celulares) */
