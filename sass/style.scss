@@ -18,9 +18,18 @@ agregamos la propiedad: valor;
     min-height: 100vh;
 }
 
+/*HEADER BOOTSRAP*/
+/*.navbar-brand img{
+    width: 100px;
+    padding: left 50px; ;
+}
+
+.h3{
+    font-size: 20px;
+}*/
 
 /*ESTILOS Header*/
-#header #navBar ul li a {
+/*#header #navBar ul li a {
     text-decoration: none;
     color: white;
     font-size: 25px;
@@ -51,7 +60,7 @@ agregamos la propiedad: valor;
 li{
     display: inline-block;
     margin-left: 25px;
-}
+}*/
 
 /*ESTILOS Inicio*/
 
@@ -69,7 +78,7 @@ li{
     position: relative;
     background-image: 
         linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Degradado */
-        url('images/portada.webp'); /* Imagen de fondo */
+        url('../images/portada.webp'); /* Imagen de fondo */
     background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
     background-position: center; /* Centra la imagen */
     color: white; /* Asegura que el texto sea blanco y legible */
@@ -259,6 +268,98 @@ li{
 .presentación h2, .presentación p {
     height:max-content;
     width: 100%;
+}
+
+/*PAGINA CONTACTO*/
+
+.form{
+    justify-content:center;
+}
+
+
+/*Media Queries*/
+/* Dispositivos móviles (celulares) */
+@media only screen and (max-width: 600px) {
+    /* Portada en Inicio */
+    .textprincipal {
+        font-size: 20px; /* Ajusta el tamaño del texto */
+        
+    }
+    
+    .h1 {
+        font-size: 30px; /* Texto principal más pequeño */
+    }
+    
+    .parrafo {
+        font-size: 18px; /* Texto del párrafo más pequeño */
+    }
+
+    .button a {
+        font-size: 18px; /* Botón más pequeño */
+        bottom: 100px; /* Ajusta la posición del botón */
+        left: 50px;
+    }
+
+    /* Sección Productos */
+    .productos {
+        grid-template-columns: 1fr; /* Una sola columna para productos en móviles */
+    }
+
+    .h2 {
+        font-size: 35px; /* Tamaño del título más pequeño */
+        margin-top: 50px;
+        justify-content: center;
+    }
+    
+    .p__producto {
+        font-size: 16px;
+    }
+    
+    .button__productos a {
+        font-size: 18px; /* Botón más pequeño */
+        padding: 8px 16px; /* Ajusta el tamaño del botón */
+    }
+}
+
+/* Dispositivos tablets */
+@media only screen and (min-width: 750px) and (max-width: 900px) {
+    /* Portada en Inicio */
+    .textprincipal {
+        font-size: 24px; /* Ajusta el tamaño del texto */
+    }
+    
+    .h1 {
+        font-size: 40px; /* Texto principal más pequeño */
+    }
+    
+    .parrafo {
+        font-size: 20px;
+    }
+
+    .button a {
+        font-size: 20px; /* Botón más pequeño */
+        bottom: 120px; /* Ajusta la posición del botón */
+        left: 100px;
+    }
+
+    /* Sección Productos */
+    .productos {
+        grid-template-columns: 1fr 1fr; /* Dos columnas para productos en tablets */
+    }
+
+    .h2 {
+        font-size: 40px; /* Tamaño del título más pequeño */
+        margin-top: 70px;
+    }
+
+    .p__producto {
+        font-size: 18px;
+    }
+    
+    .button__productos a {
+        font-size: 20px; /* Ajusta el tamaño del botón */
+        padding: 10px 18px;
+    }
 }
 
 
