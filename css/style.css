@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/*Llamar al id, clase {
-agregamos la propiedad: valor;
+/*Llamar al id, clase {agregamos la propiedad: valor;
 }
 */
 /*LLAMADO A TODO EL HTML "*{
@@ -14,22 +13,23 @@ agregamos la propiedad: valor;
   max-width: 1920px;
 }
 
-body {
+#body {
   position: relative;
   min-height: 100vh;
-  /*HEADER BOOTSRAP*/
 }
 
-body #header nav div a img {
-  margin-left: 50px;
+/*HEADER BOOTSRAP*/
+.h3 {
+  font-size: 20px;
 }
 
-body #header nav div div ul li a h3 {
-  font-size: 18px;
+/*ESTILOS Inicio*/
+.portada {
+  width: 100%;
+  height: 100vh;
 }
 
-/*ESTILOS INICIO*/
-main section .textprincipal {
+.textprincipal {
   display: flex;
   flex-direction: column;
   /* Coloca el texto uno debajo del otro */
@@ -51,7 +51,7 @@ main section .textprincipal {
   /* Asegura que el texto sea blanco y legible */
 }
 
-main section .textprincipal h1 {
+.h1 {
   font-size: 50px;
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -64,7 +64,7 @@ main section .textprincipal h1 {
   z-index: 1;
 }
 
-main section .textprincipal p {
+.parrafo {
   font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
   color: aliceblue;
@@ -76,7 +76,7 @@ main section .textprincipal p {
   z-index: 1;
 }
 
-main section .textprincipal button a {
+.button a {
   font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
   color: aliceblue;
@@ -89,17 +89,16 @@ main section .textprincipal button a {
   text-decoration: none;
 }
 
-main section .textprincipal button {
+.button a:hover {
   background-color: #b77700;
 }
 
-.portada {
-  width: 100%;
-  height: 100vh;
+.a {
+  text-decoration: none;
 }
 
 /*ESTILOS FOOTER*/
-#footer__gral div {
+.footer {
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
@@ -111,27 +110,27 @@ main section .textprincipal button {
   justify-content: space-around;
 }
 
-#footer__gral div section img {
+.footer-logo img {
   width: 100px;
 }
 
-#footer__gral div section {
+.footer-links {
   text-align: center;
 }
 
-#footer__gral div section article {
+.footer-links-autor {
   color: white;
   padding-top: 10px;
 }
 
-#footer__gral div section {
+.footer-redes i {
   color: aliceblue;
   font-size: 25px;
   margin-left: 20px;
 }
 
 /*PAGINA DE PRODUCTOS*/
-main section {
+.productos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* Dos productos por fila */
@@ -148,7 +147,51 @@ main section {
   padding: 20px 0;
 }
 
-main section h2 {
+.producto {
+  display: grid;
+  grid-template-rows: auto auto;
+  /* Primero la imagen, luego el texto */
+  gap: 10px;
+  /* Espacio entre la imagen y el texto */
+  justify-items: center;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture img {
+  width: 100%;
+  /*Que la imagen ocupe todo el ancho disponible */
+  max-width: 300px;
+  /*Ajusta este valor según el tamaño deseado de las imágenes */
+  height: auto;
+  /*Mantener la proporción de la imagen */
+}
+
+.descrpción {
+  grid-column: -1;
+  /*Hace que la descripción ocupe toda la fila (ambas columnas) */
+  text-align: center;
+  /* Centrar el texto debajo de cada imagen */
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  margin-bottom: 100px;
+}
+
+.p__producto {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.h2 {
   grid-column: -1;
   /*Hace que el h2 ocupe toda la fila (ambas columnas) */
   font-size: 50px;
@@ -161,51 +204,7 @@ main section h2 {
   z-index: 10px;
 }
 
-main section p {
-  grid-column: -1;
-  /*Hace que la descripción ocupe toda la fila (ambas columnas) */
-  text-align: center;
-  /* Centrar el texto debajo de cada imagen */
-  font-size: 15px;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #000;
-  margin-bottom: 100px;
-}
-
-main section div {
-  display: grid;
-  grid-template-rows: auto auto;
-  /* Primero la imagen, luego el texto */
-  gap: 10px;
-  /* Espacio entre la imagen y el texto */
-  justify-items: center;
-}
-
-main section div picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main section div picture img {
-  width: 100%;
-  /* Que la imagen ocupe todo el ancho disponible */
-  max-width: 300px;
-  /* Ajusta este valor según el tamaño deseado de las imágenes */
-  height: auto;
-  /* Mantener la proporción de la imagen */
-}
-
-main section div p {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
-}
-
-main section button {
+.button__productos {
   display: flex;
   justify-content: center;
   /* Centra el botón horizontalmente */
@@ -215,7 +214,7 @@ main section button {
   border: none;
 }
 
-main section button a {
+.button__productos a {
   display: inline-block;
   /* Usa inline-block para ajustar el tamaño según su contenido */
   font-size: 25px;
@@ -233,12 +232,12 @@ main section button a {
   /* Ajusta el tamaño del botón según el contenido del enlace */
 }
 
-main section button {
+.button__productos a:hover {
   background-color: #b77700;
 }
 
 /*PAGINA SOBRE NOSOTROS*/
-main section {
+.presentación {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* Dos columnas por fila */
@@ -256,25 +255,13 @@ main section {
   padding-top: 150px;
 }
 
-main section section h2 {
-  height: max-content;
-  width: 100%;
-}
-
-main section section p {
+.presentación h2, .presentación p {
   height: max-content;
   width: 100%;
 }
 
 /*PAGINA CONTACTO*/
-#main-contacto {
-  /* Estilos generales del formulario */
-  /* Estilo del título dentro de cada fieldset */
-  /* Estilos para select y textarea */
-  /* Botones de acción */
-}
-
-#main-contacto h2 {
+.h2-contacto {
   text-align: center;
   font-size: 50px;
   font-weight: 600;
@@ -286,7 +273,8 @@ main section section p {
   z-index: 10px;
 }
 
-#main-contacto form {
+/* Estilos generales del formulario */
+.form {
   width: 80%;
   max-width: 600px;
   margin: 0 auto;
@@ -296,41 +284,14 @@ main section section p {
   background-color: orange;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Estilos para los inputs */
-  /* Estilos específicos para el campo de radio */
 }
 
-#main-contacto form fieldset {
+.form fieldset {
   border: none;
   margin-bottom: 20px;
-  /* Estilos para los labels */
 }
 
-#main-contacto form fieldset label {
-  display: block;
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 8px;
-  font-family: "Arial", sans-serif;
-}
-
-#main-contacto form input[type=text], #main-contacto form input[type=email], #main-contacto form input[type=radio] {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-family: "Arial", sans-serif;
-  box-sizing: border-box;
-}
-
-#main-contacto form label[for=radio] {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-#main-contacto h2 {
+.form h2 {
   font-size: 24px;
   color: #333;
   margin-bottom: 10px;
@@ -339,7 +300,17 @@ main section section p {
   font-weight: 600;
 }
 
-#main-contacto select, #main-contacto textarea {
+/* Estilos para los labels */
+.form label {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+  font-family: "Arial", sans-serif;
+}
+
+/* Estilos para los inputs */
+form input[type=text], form input[type=email], form input[type=radio], form select, form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -350,38 +321,71 @@ main section section p {
   box-sizing: border-box;
 }
 
-#main-contacto input[type=submit], #main-contacto input[type=reset] {
+/* Radio buttons con etiquetas a la izquierda */
+form input[type=radio] {
+  width: auto;
+  margin-right: 10px;
+}
+
+form label[for=radio] {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Estilo del textarea */
+form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Botones */
+form input[type=submit], form input[type=reset] {
   width: calc(50% - 10px);
   padding: 10px;
   font-size: 18px;
-  color: #fff;
   font-family: "Arial", sans-serif;
+  color: #fff;
   background-color: #9b1010;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
-  margin-top: 10px;
 }
 
-/* Media Queries */
-/* Para pantallas de menos de 600px (celulares) */
-/* Para pantallas de 600px a 900px (tablets) */
+form input[type=submit]:hover, form input[type=reset]:hover {
+  background-color: #e40f0f;
+}
+
+/* Botones alineados */
+form input[type=reset] {
+  margin-left: 0px;
+  margin-top: 20px;
+  background-color: #100b0b;
+}
+
+form input[type=reset]:hover {
+  background-color: #3a3a3a;
+}
+
+/* Estilos para móviles */
+@media only screen and (max-width: 600px) {
+  form {
+    width: 95%;
+  }
+  form input[type=submit], form input[type=reset] {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
 /*PAGINA PREGUNTAS FRECUENTES*/
-#main {
+#faq {
   justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-#main #faq {
-  margin-bottom: 100px;
-  justify-items: center;
-  padding: left 100px;
-  /*justify-items: center;
-  */
-}
-
-/*MEDIA QUERIES*/
-/* DISPOSITIVOS MOVIL (celulares) */
+/*Media Queries*/
+/* Dispositivos móviles (celulares) */
 @media only screen and (max-width: 600px) {
   /* Portada en Inicio */
   /* Sección Productos */
@@ -407,7 +411,6 @@ main section section p {
   .productos {
     grid-template-columns: 1fr;
     /* Una sola columna para productos en móviles */
-    width: 80%;
   }
   .h2 {
     font-size: 35px;
@@ -425,21 +428,7 @@ main section section p {
     /* Ajusta el tamaño del botón */
   }
 }
-/*Formulario*/
-@media only screen and (max-width: 600px) {
-  form {
-    width: 95%;
-    padding: 15px;
-  }
-  fieldset label {
-    font-size: 14px;
-  }
-  input[type=submit], input[type=reset] {
-    width: 100%;
-    font-size: 16px;
-  }
-}
-/* DISPOSITIVOS TABLET */
+/* Dispositivos tablets */
 @media only screen and (min-width: 750px) and (max-width: 900px) {
   /* Portada en Inicio */
   /* Sección Productos */
@@ -479,20 +468,6 @@ main section section p {
     padding: 10px 18px;
   }
 }
-/*Formulario*/
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-  form {
-    width: 90%;
-  }
-  h2 {
-    font-size: 20px;
-  }
-  input[type=submit], input[type=reset] {
-    width: 45%;
-    /* Reducimos el ancho para mantener espacio entre los botones */
-    font-size: 16px;
-  }
-}
-/*BREAKPOINTS mobile=600px tablet=600 y 900px desktop= 1200 y 1400px */
+/*BREAKPOINTS mobile=600px tablet=750 y 900px desktop= 1200 y 1400px */
 
 /*# sourceMappingURL=style.css.map */
