@@ -383,6 +383,16 @@ form input[type=reset]:hover {
   text-align: center;
   margin-bottom: 50px;
 }
+#faq .pregunta {
+  width: 50%;
+  margin: 0 auto; /* Centra la sección dentro del contenedor */
+  padding: 20px; /* Añade un poco de padding interno para más espacio */
+  text-align: left;
+}
+#faq .pregunta .h3p {
+  border: solid;
+  border-color: orange;
+}
 
 /*Media Queries*/
 /* Dispositivos móviles (celulares) */
@@ -392,31 +402,45 @@ form input[type=reset]:hover {
   .textprincipal {
     font-size: 20px;
     /* Ajusta el tamaño del texto */
+    display: block;
   }
   .h1 {
     font-size: 30px;
     /* Texto principal más pequeño */
+    top: 300px;
   }
   .parrafo {
     font-size: 18px;
     /* Texto del párrafo más pequeño */
+    margin-top: -250px;
   }
   .button a {
     font-size: 18px;
     /* Botón más pequeño */
     bottom: 100px;
     /* Ajusta la posición del botón */
-    left: 50px;
+    left: 70px;
+    /*espacio debajo del boton*/
+    bottom: 250px;
   }
+  /*PAGINA PRODUCTOS*/
   .productos {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
     /* Una sola columna para productos en móviles */
+    grid-template-areas: "imagen" "texto";
+    justify-items: center;
+  }
+  .producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .h2 {
     font-size: 35px;
     /* Tamaño del título más pequeño */
     margin-top: 50px;
     justify-content: center;
+    text-align: center;
   }
   .p__producto {
     font-size: 16px;
@@ -426,6 +450,12 @@ form input[type=reset]:hover {
     /* Botón más pequeño */
     padding: 8px 16px;
     /* Ajusta el tamaño del botón */
+  }
+  /*FOOTER*/
+  .footer {
+    height: 250px;
+    display: inline-block;
+    text-align: center;
   }
 }
 /* Dispositivos tablets */
