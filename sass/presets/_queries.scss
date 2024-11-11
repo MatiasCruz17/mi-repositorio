@@ -1,0 +1,166 @@
+/*Media Queries*/
+/* Dispositivos móviles (celulares) */
+@media only screen and (max-width: 600px) {
+	/* Portada en Inicio */
+	/* Sección Productos */
+	.textprincipal {
+		font-size: 20px;
+		/* Ajusta el tamaño del texto */
+		display: block;
+	}
+	.h1 {
+		font-size: 30px;
+		/* Texto principal más pequeño */
+		top:300px;
+	}
+	.parrafo {
+		font-size: 18px;
+		/* Texto del párrafo más pequeño */
+		margin-top: -250px;
+	}
+	.button a {
+		font-size: 18px;
+		/* Botón más pequeño */
+		bottom: 100px;
+		/* Ajusta la posición del botón */
+		left: 70px;
+		/*espacio debajo del boton*/
+		bottom: 250px;
+	}
+/*PAGINA PRODUCTOS*/
+/*NO LOGRO HACER CAMBIOS EN ESTA PAGINA*/
+    .productos {
+	    grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+    .h2 {
+	    font-size: 30px;
+	    margin-top: 50px;
+	    text-align: center;
+    }
+    .p__producto {
+	    font-size: 16px;
+    }
+    .button__productos a {
+	    font-size: 18px;
+	    padding: 8px 16px;
+    }
+/*PAGINA NOSOTROS*/
+    .presentación {
+	    grid-template-columns: 1fr; /* Una sola columna en móviles */
+		display:block;
+		max-width: 100%;
+    }
+	.img__presentación{
+		max-width: 100%;
+	}
+    .presentación h2 {
+	    font-size: 35px;
+	    text-align: center;
+	    margin-top: 20px;
+    }
+    .presentación p {
+	    font-size: 16px;
+    }
+/*PAGINA CONTACTO*/
+    form {
+        width: 95%;
+    }
+    form input[type=submit], form input[type=reset] {
+        width: 100%;
+        margin: 10px 0;
+    }
+/*PAGINA PREGUNTAS FRECUENTES*/
+    .pregunta {
+	    width:100%; /* Ocupa toda la pantalla en móviles */
+	    padding: 10px;
+		/*NO LOGRO QUE LA PREGUNTA Y RESPUESTA, OCUPE TODA LA PANTALLA*/
+    }
+	.h2{
+		font-size: 35px;
+		padding: 10px;
+	}
+    .pregunta h3 {
+	    font-size: 20px;
+    }
+/*FOOTER*/
+    .footer{
+		height: 250px;
+		display: inline-block;
+		text-align: center;
+	}
+}
+/* Dispositivos tablets */
+@media only screen and (min-width: 750px) and (max-width: 900px) {
+/* Portada en Inicio */
+.textprincipal {
+	font-size: 24px;
+}
+.h1 {
+	font-size: 40px;
+}
+.parrafo {
+	font-size: 20px;
+}
+.button a {
+	font-size: 20px;
+	bottom: 120px;
+	left: 100px;
+}
+
+/* Página Productos para tablet */
+.productos {
+	grid-template-columns: 1fr 1fr;
+}
+.h2 {
+	font-size: 40px;
+	margin-top: 70px;
+}
+.p__producto {
+	font-size: 18px;
+}
+.button__productos a {
+	font-size: 20px;
+	padding: 10px 18px;
+}
+
+/* Página Nosotros para tablet */
+.presentación {
+	grid-template-columns: 1fr 1fr;
+	margin: 0 auto;
+	width: 85%;
+}
+.presentación h2 {
+	font-size: 35px;
+}
+.presentación p {
+	font-size: 18px;
+}
+
+/* Página Preguntas Frecuentes para tablet */
+#faq .pregunta {
+	width: 80%;
+	padding: 20px;
+	margin: 0 auto;
+}
+.h2 {
+	font-size: 35px;
+	padding: 10px;
+}
+.pregunta h3 {
+	font-size: 25px;
+}
+
+/* Footer para tablet */
+.footer {
+	flex-direction: row;
+	text-align: center;
+	padding: 20px;
+}
+.footer-logo img {
+	width: 80px;
+}
+.footer-links-autor {
+	padding-top: 5px;
+}
+}
+/*BREAKPOINTS mobile=600px tablet=750 y 900px desktop= 1200 y 1400px */

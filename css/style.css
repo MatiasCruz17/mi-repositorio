@@ -1,23 +1,4 @@
 @charset "UTF-8";
-/*Llamar al id, clase {agregamos la propiedad: valor;
-}
-*/
-/*LLAMADO A TODO EL HTML "*{
-}
-" */
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  max-width: 1920px;
-}
-
-#body {
-  position: relative;
-  min-height: 100vh;
-}
-
 /*HEADER BOOTSRAP*/
 .h3 {
   font-size: 20px;
@@ -93,42 +74,6 @@
   background-color: #b77700;
 }
 
-.a {
-  text-decoration: none;
-}
-
-/*ESTILOS FOOTER*/
-.footer {
-  background-color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  height: auto;
-  display: flex;
-  min-height: 10dvh;
-  grid-template-rows: auto 1fr auto;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.footer-logo img {
-  width: 100px;
-}
-
-.footer-links {
-  text-align: center;
-}
-
-.footer-links-autor {
-  color: white;
-  padding-top: 10px;
-}
-
-.footer-redes i {
-  color: aliceblue;
-  font-size: 25px;
-  margin-left: 20px;
-}
-
 /*PAGINA DE PRODUCTOS*/
 .productos {
   display: grid;
@@ -188,28 +133,25 @@
   font-size: 20px;
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
-  color: #333;
+  color: 17px rgb(60, 60, 60);
 }
 
 .h2 {
   grid-column: -1;
   /*Hace que el h2 ocupe toda la fila (ambas columnas) */
-  font-size: 50px;
+  font-size: 50px orange;
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: orange;
   margin-bottom: 20px;
   /* Añade espacio entre el h2 y los productos */
   margin-top: 100px;
   z-index: 10px;
 }
 
-.button__productos {
+.btn__productos {
   display: flex;
   justify-content: center;
-  /* Centra el botón horizontalmente */
   margin: 100px auto;
-  /* Asegura que el botón esté centrado y con margen respecto a otros elementos */
   color: orange;
   border: none;
 }
@@ -367,16 +309,6 @@ form input[type=reset]:hover {
   background-color: #3a3a3a;
 }
 
-/* Estilos para móviles */
-@media only screen and (max-width: 600px) {
-  form {
-    width: 95%;
-  }
-  form input[type=submit], form input[type=reset] {
-    width: 100%;
-    margin: 10px 0;
-  }
-}
 /*PAGINA PREGUNTAS FRECUENTES*/
 #faq {
   justify-content: center;
@@ -392,6 +324,38 @@ form input[type=reset]:hover {
 #faq .pregunta .h3p {
   border: solid;
   border-color: orange;
+}
+
+/*ESTILOS FOOTER*/
+.footer {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: auto;
+  display: flex;
+  min-height: 10dvh;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-logo img {
+  width: 100px;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links-autor {
+  color: white;
+  padding-top: 10px;
+}
+
+.footer-redes i {
+  color: aliceblue;
+  font-size: 25px;
+  margin-left: 20px;
 }
 
 /*Media Queries*/
@@ -424,22 +388,13 @@ form input[type=reset]:hover {
     bottom: 250px;
   }
   /*PAGINA PRODUCTOS*/
+  /*NO LOGRO HACER CAMBIOS EN ESTA PAGINA*/
   .productos {
-    grid-template-columns: repeat(1, 1fr);
-    /* Una sola columna para productos en móviles */
-    grid-template-areas: "imagen" "texto";
-    justify-items: center;
-  }
-  .producto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr; /* Una columna en móviles */
   }
   .h2 {
-    font-size: 35px;
-    /* Tamaño del título más pequeño */
+    font-size: 30px;
     margin-top: 50px;
-    justify-content: center;
     text-align: center;
   }
   .p__producto {
@@ -447,9 +402,45 @@ form input[type=reset]:hover {
   }
   .button__productos a {
     font-size: 18px;
-    /* Botón más pequeño */
     padding: 8px 16px;
-    /* Ajusta el tamaño del botón */
+  }
+  /*PAGINA NOSOTROS*/
+  .presentación {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    display: block;
+    max-width: 100%;
+  }
+  .img__presentación {
+    max-width: 100%;
+  }
+  .presentación h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .presentación p {
+    font-size: 16px;
+  }
+  /*PAGINA CONTACTO*/
+  form {
+    width: 95%;
+  }
+  form input[type=submit], form input[type=reset] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  /*PAGINA PREGUNTAS FRECUENTES*/
+  .pregunta {
+    width: 100%; /* Ocupa toda la pantalla en móviles */
+    padding: 10px;
+    /*NO LOGRO QUE LA PREGUNTA Y RESPUESTA, OCUPE TODA LA PANTALLA*/
+  }
+  .h2 {
+    font-size: 35px;
+    padding: 10px;
+  }
+  .pregunta h3 {
+    font-size: 20px;
   }
   /*FOOTER*/
   .footer {
@@ -461,32 +452,26 @@ form input[type=reset]:hover {
 /* Dispositivos tablets */
 @media only screen and (min-width: 750px) and (max-width: 900px) {
   /* Portada en Inicio */
-  /* Sección Productos */
   .textprincipal {
     font-size: 24px;
-    /* Ajusta el tamaño del texto */
   }
   .h1 {
     font-size: 40px;
-    /* Texto principal más pequeño */
   }
   .parrafo {
     font-size: 20px;
   }
   .button a {
     font-size: 20px;
-    /* Botón más pequeño */
     bottom: 120px;
-    /* Ajusta la posición del botón */
     left: 100px;
   }
+  /* Página Productos para tablet */
   .productos {
     grid-template-columns: 1fr 1fr;
-    /* Dos columnas para productos en tablets */
   }
   .h2 {
     font-size: 40px;
-    /* Tamaño del título más pequeño */
     margin-top: 70px;
   }
   .p__producto {
@@ -494,10 +479,65 @@ form input[type=reset]:hover {
   }
   .button__productos a {
     font-size: 20px;
-    /* Ajusta el tamaño del botón */
     padding: 10px 18px;
+  }
+  /* Página Nosotros para tablet */
+  .presentación {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    width: 85%;
+  }
+  .presentación h2 {
+    font-size: 35px;
+  }
+  .presentación p {
+    font-size: 18px;
+  }
+  /* Página Preguntas Frecuentes para tablet */
+  #faq .pregunta {
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .h2 {
+    font-size: 35px;
+    padding: 10px;
+  }
+  .pregunta h3 {
+    font-size: 25px;
+  }
+  /* Footer para tablet */
+  .footer {
+    flex-direction: row;
+    text-align: center;
+    padding: 20px;
+  }
+  .footer-logo img {
+    width: 80px;
+  }
+  .footer-links-autor {
+    padding-top: 5px;
   }
 }
 /*BREAKPOINTS mobile=600px tablet=750 y 900px desktop= 1200 y 1400px */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  max-width: 1920px;
+}
+
+#body {
+  position: relative;
+  min-height: 100vh;
+}
+
+/*Llamar al id, clase {agregamos la propiedad: valor;
+}
+*/
+/*LLAMADO A TODO EL HTML "*{
+}
+" */
 
 /*# sourceMappingURL=style.css.map */

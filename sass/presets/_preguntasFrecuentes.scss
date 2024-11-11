@@ -1,0 +1,16 @@
+/*PAGINA PREGUNTAS FRECUENTES*/
+#faq {
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 50px;
+    .pregunta{
+		width:50%;
+		margin: 0 auto; /* Centra la sección dentro del contenedor */
+        padding: 20px; /* Añade un poco de padding interno para más espacio */
+		text-align: left;
+		.h3p{
+			border:solid;
+			border-color:orange;
+		}
+	}
+}

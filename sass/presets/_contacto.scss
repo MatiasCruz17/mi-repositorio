@@ -1,0 +1,94 @@
+/*PAGINA CONTACTO*/
+.h2-contacto {
+	text-align: center;
+	font-size: 50px;
+	font-weight: 600;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: orange;
+	margin-bottom: 20px;
+	/* Añade espacio entre el h2 y los productos */
+	margin-top: 100px;
+	z-index: 10px;
+}
+/* Estilos generales del formulario */
+.form {
+	width: 80%;
+	max-width: 600px;
+	margin: 0 auto;
+	/* Centra el formulario */
+	margin-bottom: 10%;
+	padding: 20px;
+	background-color: orange;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form fieldset {
+	border: none;
+	margin-bottom: 20px;
+}
+.form h2 {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 10px;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 600;
+}
+/* Estilos para los labels */
+.form label {
+	display: block;
+	font-size: 16px;
+	color: #555;
+	margin-bottom: 8px;
+	font-family: "Arial", sans-serif;
+}
+/* Estilos para los inputs */
+form input[type=text], form input[type=email], form input[type=radio], form select, form textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+/* Radio buttons con etiquetas a la izquierda */
+form input[type=radio] {
+	width: auto;
+	margin-right: 10px;
+}
+form label[for=radio] {
+	display: inline-block;
+	margin-right: 20px;
+}
+/* Estilo del textarea */
+form textarea {
+	min-height: 100px;
+	resize: vertical;
+}
+/* Botones */
+form input[type=submit], form input[type=reset] {
+	width: calc(50% - 10px);
+	padding: 10px;
+	font-size: 18px;
+	font-family: "Arial", sans-serif;
+	color: #fff;
+	background-color: #9b1010;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+}
+form input[type=submit]:hover, form input[type=reset]:hover {
+	background-color: #e40f0f;
+}
+/* Botones alineados */
+form input[type=reset] {
+	margin-left: 0px;
+	margin-top: 20px;
+    background-color: #100b0b;
+}
+form input[type=reset]:hover {
+	background-color: #3a3a3a;
+}

@@ -1,0 +1,22 @@
+/*PAGINA SOBRE NOSOTROS*/
+.presentación {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/* Dos columnas por fila */
+	grid-template-areas: "imagen imagen" "texto texto ";
+	gap: 20px;
+	/* Espacio entre las columnas */
+	justify-items: center;
+	/* Centrar contenido en cada celda */
+	align-items: center;
+	width: 90%;
+	/* Para que no ocupe toda la pantalla, puedes ajustar */
+	margin: 0 30px;
+	/* Centrar el contenedor dentro de la página */
+	margin-bottom: 100px;
+	padding-top: 150px;
+}
+.presentación h2, .presentación p {
+	height: max-content;
+	width: 100%;
+}

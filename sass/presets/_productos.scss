@@ -1,0 +1,76 @@
+/*PAGINA DE PRODUCTOS*/
+.productos {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/* Dos productos por fila */
+	grid-template-areas: "imagen imagen" "texto texto ";
+	gap: 20px;
+	/* Espacio entre los productos */
+	justify-items: center;
+	/* Centrar contenido en cada celda */
+	align-items: center;
+	width: 90%;
+	/* Para que no ocupe toda la pantalla, puedes ajustar */
+	margin: 0 auto;
+	/* Centrar el contenedor dentro de la página */
+	padding: 20px 0;
+}
+.producto {
+	display: grid;
+	grid-template-rows: auto auto;
+	/* Primero la imagen, luego el texto */
+	gap: 10px;
+	/* Espacio entre la imagen y el texto */
+	justify-items: center;
+}
+.picture {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.picture img {
+	width: 100%;
+	/*Que la imagen ocupe todo el ancho disponible */
+	max-width: 300px;
+	/*Ajusta este valor según el tamaño deseado de las imágenes */
+	height: auto;
+	/*Mantener la proporción de la imagen */
+}
+.descrpción {
+	grid-column: -1;
+	/*Hace que la descripción ocupe toda la fila (ambas columnas) */
+	text-align: center;
+	/* Centrar el texto debajo de cada imagen */
+	font-size: 15px;
+	font-weight: 600;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	margin-bottom: 100px;
+}
+.p__producto {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 500;
+	font-family: Arial, Helvetica, sans-serif;
+	color:$textparrafo;
+}
+.h2 {
+	grid-column: -1;
+	/*Hace que el h2 ocupe toda la fila (ambas columnas) */
+	font-size: $tituloprincipal;
+	font-weight: 600;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin-bottom: 20px;
+	/* Añade espacio entre el h2 y los productos */
+	margin-top: 100px;
+	z-index: 10px;
+}
+.btn__productos{
+	@include buttons;
+}
+.button__productos a {
+    @include ancor-boton;
+}
+.button__productos a:hover {
+	background-color: #b77700;
+}

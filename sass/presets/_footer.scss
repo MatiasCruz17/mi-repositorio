@@ -1,0 +1,27 @@
+/*ESTILOS FOOTER*/
+.footer {
+	background-color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	height: auto;
+	display: flex;
+	min-height: 10dvh;
+	grid-template-rows: auto 1fr auto;
+	align-items: center;
+	justify-content: space-around;
+}
+.footer-logo img {
+	width: 100px;
+}
+.footer-links {
+	text-align: center;
+}
+.footer-links-autor {
+	color: white;
+	padding-top: 10px;
+}
+.footer-redes i {
+	color: aliceblue;
+	font-size: 25px;
+	margin-left: 20px;
+}
