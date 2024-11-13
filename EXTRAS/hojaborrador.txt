@@ -447,3 +447,20 @@ form input[type=reset]:hover {
 	color: orange;
 	border: none;
 }
+
+@mixin  ancor button {display: inline-block;
+	/* Usa inline-block para ajustar el tamaño según su contenido */
+	font-size: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: aliceblue;
+	background-color: orange;
+	border: none;
+	/* Elimina cualquier borde no deseado */
+	outline: none;
+	/* Elimina el borde de enfoque si se hace clic */
+	padding: 10px 20px;
+	text-decoration: none;
+	/* Elimina subrayado en el enlace */
+	width: fit-content;
+	/* Ajusta el tamaño del botón según el contenido del enlace */
+}

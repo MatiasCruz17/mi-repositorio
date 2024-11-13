@@ -1,25 +1,26 @@
 @mixin buttons{
-    display: flex;
-	justify-content: center;
-	margin: 100px auto;
-	color: orange;
-	border: none;
+	text-align: center;
+	padding: 20px;
 }
 
 @mixin ancor-boton{
-    display: inline-block;
-	/* Usa inline-block para ajustar el tamaño según su contenido */
+	padding: 10px 20px;
 	font-size: 25px;
 	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
 	color: aliceblue;
 	background-color: orange;
-	border: none;
-	/* Elimina cualquier borde no deseado */
-	outline: none;
-	/* Elimina el borde de enfoque si se hace clic */
-	padding: 10px 20px;
-	text-decoration: none;
-	/* Elimina subrayado en el enlace */
-	width: fit-content;
-	/* Ajusta el tamaño del botón según el contenido del enlace */
+    border: none;
+
+}
+
+@mixin boton-animacion{
+	transform: scale(0,9);
+}
+
+@mixin descripcion{
+	font-size: 15px;
+	font-weight: 600;
+	color: #000;
+	text-align: center;
 }
