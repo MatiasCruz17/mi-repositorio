@@ -32,7 +32,7 @@
   /* Asegura que el texto sea blanco y legible */
 }
 
-.h1 {
+.h1-inicio {
   font-size: 50px;
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -120,7 +120,7 @@
   text-align: center;
 }
 
-.h2 {
+.h1 {
   font-size: 50px; /* Asegúrate de definir las variables en SCSS o usa un tamaño fijo */
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -172,16 +172,16 @@
   padding-top: 150px;
 }
 
-.presentación h2, .presentación p {
+.presentación h1, .presentación p {
   height: max-content;
   width: 100%;
 }
-.presentación h2 h2, .presentación p h2 {
+.presentación h1 h1, .presentación p h1 {
   color: 50px;
 }
 
 /*PAGINA CONTACTO*/
-.h2-contacto {
+.h1 {
   text-align: center;
   font-size: 50px;
   font-weight: 600;
@@ -293,16 +293,16 @@ form input[type=reset]:hover {
   text-align: center;
   margin-bottom: 50px;
 }
-#faq h2 {
+#faq h1 {
   color: 50px;
 }
-#faq h2 .pregunta {
+#faq h1 .pregunta {
   width: 50%;
   margin: 0 auto; /* Centra la sección dentro del contenedor */
   padding: 20px; /* Añade un poco de padding interno para más espacio */
   text-align: left;
 }
-#faq h2 .pregunta .h3p {
+#faq h1 .pregunta .h3p {
   border: solid;
   border-color: orange;
 }
@@ -343,7 +343,6 @@ form input[type=reset]:hover {
 /* Dispositivos móviles (celulares) */
 @media only screen and (max-width: 600px) {
   /* Portada en Inicio */
-  /* Sección Productos */
   .textprincipal {
     font-size: 20px;
     /* Ajusta el tamaño del texto */
@@ -371,12 +370,15 @@ form input[type=reset]:hover {
   /*PAGINA PRODUCTOS*/
   /*NO LOGRO HACER CAMBIOS EN ESTA PAGINA*/
   .productos {
-    grid-template-columns: 1fr; /* Una columna en móviles */
+    grid-template-columns: 1fr !important; /* Una columna en móviles */
   }
   .h2 {
     font-size: 30px;
     margin-top: 50px;
     text-align: center;
+  }
+  .picture img {
+    width: 80%;
   }
   .p__producto {
     font-size: 16px;

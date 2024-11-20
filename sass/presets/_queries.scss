@@ -2,7 +2,6 @@
 /* Dispositivos móviles (celulares) */
 @media only screen and (max-width: 600px) {
 	/* Portada en Inicio */
-	/* Sección Productos */
 	.textprincipal {
 		font-size: 20px;
 		/* Ajusta el tamaño del texto */
@@ -30,13 +29,16 @@
 /*PAGINA PRODUCTOS*/
 /*NO LOGRO HACER CAMBIOS EN ESTA PAGINA*/
     .productos {
-	    grid-template-columns: 1fr; /* Una columna en móviles */
+	    grid-template-columns: 1fr !important; /* Una columna en móviles */
     }
     .h2 {
 	    font-size: 30px;
 	    margin-top: 50px;
 	    text-align: center;
     }
+	.picture img{
+		width: 80%;
+	}
     .p__producto {
 	    font-size: 16px;
     }
