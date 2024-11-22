@@ -72,25 +72,35 @@
         margin: 10px 0;
     }
 /*PAGINA PREGUNTAS FRECUENTES*/
-    .pregunta {
-	    width:100%; /* Ocupa toda la pantalla en móviles */
-	    padding: 10px;
-		/*NO LOGRO QUE LA PREGUNTA Y RESPUESTA, OCUPE TODA LA PANTALLA*/
-    }
-	.h2{
-		font-size: 35px;
-		padding: 10px;
-	}
-    .pregunta h3 {
-	    font-size: 20px;
-    }
-/*FOOTER*/
-    .footer{
-		height: 250px;
-		display: inline-block;
-		text-align: center;
-	}
+#faq {
+    width: 90%; /* Ajustar el ancho al 90% del viewport */
+    padding: 20px; /* Reducir el padding */
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+.pregunta {
+    width: 100%; /* Las preguntas ocupan todo el ancho */
+    padding: 15px;
+
+.h3p {
+    font-size: 16px; /* Texto más pequeño */
+    padding: 10px;
+    }
+}
+
+.h1 {
+    font-size: 24px; /* Reducir el tamaño del título */
+    margin-bottom: 50px;
+}
+}
+/*FOOTER*/
+.footer{
+	height: 250px;
+	display: inline-block;
+	text-align: center;
+}
+
 /* Dispositivos tablets */
 @media only screen and (min-width: 750px) and (max-width: 900px) {
 /* Portada en Inicio */
@@ -139,17 +149,27 @@
 }
 
 /* Página Preguntas Frecuentes para tablet */
-#faq .pregunta {
-	width: 80%;
-	padding: 20px;
-	margin: 0 auto;
+#faq {
+    width: 80%; /* Ajustar el ancho */
+    padding: 30px; /* Reducir un poco el padding */
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
-.h2 {
-	font-size: 35px;
-	padding: 10px;
+
+.pregunta {
+    width: 75%; /* Las preguntas ocupan el 75% */
+    padding: 18px;
+
+.h3p {
+    font-size: 18px; /* Texto ligeramente más pequeño */
+    padding: 15px;
+    }
 }
-.pregunta h3 {
-	font-size: 25px;
+
+.h1 {
+    font-size: 28px; /* Ajustar el tamaño del título */
+    margin-bottom: 70px;
+  }
 }
 
 /* Footer para tablet */
@@ -164,5 +184,5 @@
 .footer-links-autor {
 	padding-top: 5px;
 }
-}
+
 /*BREAKPOINTS mobile=600px tablet=750 y 900px desktop= 1200 y 1400px */
